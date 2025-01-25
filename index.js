@@ -10,11 +10,14 @@ const port = 3000;
 app.use(bodyParser.json());
 app.use(cors());
 
+import dotenv from 'dotenv';
+dotenv.config();
+
 // Azure OpenAI configuration
-const endpoint = "";
-const apiKey = "";
-const apiVersion = "";
-const deployment = ""; // This must match your deployment name.
+const endpoint = process.env.endpoint;
+const apiKey = process.env.apiKey;
+const apiVersion = "2024-05-01-preview";
+const deployment = process.env.deployment; // This must match your deployment name.
 
 const client = new AzureOpenAI({ endpoint, apiKey, apiVersion, deployment });
 
