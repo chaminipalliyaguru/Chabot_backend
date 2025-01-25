@@ -11,10 +11,10 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // Azure OpenAI configuration
-const endpoint = "https://crosscult.openai.azure.com/";
-const apiKey = "97SGT1aNouNR6myZnKV3PlTResX2zcLoB0hoKR8wZy6wBgRe6euEJQQJ99BAACYeBjFXJ3w3AAABACOGNzJE";
-const apiVersion = "2024-05-01-preview";
-const deployment = "gpt-35-turbo"; // This must match your deployment name.
+const endpoint = "";
+const apiKey = "";
+const apiVersion = "";
+const deployment = ""; // This must match your deployment name.
 
 const client = new AzureOpenAI({ endpoint, apiKey, apiVersion, deployment });
 
